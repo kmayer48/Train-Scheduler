@@ -1,0 +1,27 @@
+body{
+    background: url("../images/background.jpeg");
+    background-size: cover;
+}
+
+.jumbotron{
+    background-color: rgba(220,220,220,0.85);
+    font-family: 'Quicksand', sans-serif;
+}
+
+.list-group-item{
+    background-color: rgba(220,220,220,0.85);
+    font-family: 'Quicksand', sans-serif;
+    font-weight: bolder;
+}
+
+h1{
+    font-size: 50px;
+}
+
+h2{
+    font-size: 40px;
+}
+
+#current-time{
+    font-size: 30px;
+}

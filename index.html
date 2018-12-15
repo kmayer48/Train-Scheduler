@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Train Scheduler</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <script src="https://rawgit.com/moment/moment/2.2.1/min/moment.min.js"></script>
+</head>
+
+<body>
+    <div class="container-fluid">
+        <header class="jumbotron text-center">
+        <h1>Washington, DC Metro Times</h1>
+        <img src="assets/images/header.png" alt="DC Flag">
+        <h2 class="text-center">Current Time: </h2><div id="current-time"></div>
+    </header>
+    <div class="train-list">
+    <div class="list-group mb-4" class="train-list">
+        <div class="list-group-item list-group-item-secondary tablehead"><i class="fas fa-train"></i><b> Current Train Schedule</b></div>
+    <div class="list-group-item">
+        <table class="table text-center" id="trainTable">
+        <thead>
+        <tr>
+            <th scope="col" id="trainName"><i class="fas fa-subway"></i> Train Name</i></th>
+            <th scope="col" id="destination"><i class="fas fa-map-marked-alt"></i> Destination</i></th>
+            <th scope="col" id="frequency"><i class="fas fa-clock"></i> Frequency (min)</th>
+            <th scope="col" id="nextArrival"><i class="far fa-calendar-alt"></i> Next Arrival</th>
+            <th scope="col" id="minutesAway"><i class="fas fa-stopwatch"></i> Minutes Away</th>
+        </tr>
+    </thead>
+    <tbody>
+
+    </tbody>
+    </table>
+    </div>
+    </div>
+    </div>  
+
+    <div class="list-group mb-4" id="search-form">
+    <div class="list-group-item list-group-item-secondary">
+        <i class="fas fa-plus-square"></i></i> Add Train</div>
+    <form class="list-group-item">
+    <div class="form-group">
+        <label for="name">Train Name</label>
+        <textarea class="form-control" id="trainName-form" rows="1"></textarea>
+    </div>
+    <div class="form-group">
+        <label for="role">Destination</label>
+        <textarea class="form-control" id="destination-form" rows="1"></textarea>
+    </div>
+    <div class="form-group">
+        <label for="start-date">First Train Time (Military Time)</label>
+        <input class="form-control" id="firstTrainTime-form" type="time" rows="1"></input>
+    </div>
+    <div class="form-group">
+        <label for="rate">Frequency (min)</label>
+        <input class="form-control" id="frequency-form" type="number" rows="1"></input>
+    </div>
+    <button type="submit" class="btn btn-primary" id="add-train-btn"> <i class="fas fa-plus-circle"></i> Submit</button>
+    </form>
+    </div>
+    </div>
+
+    <script src="https://www.gstatic.com/firebasejs/5.7.0/firebase.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="assets/javascript/logic.js"></script>
+
+</body>
+
+</html>
